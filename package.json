@@ -1,0 +1,52 @@
+{
+    "name": "angular-webpack-boilerplate",
+    "version": "0.7.0",
+    "author": "Niko Kovačič <niko.kovacic2@gmail.com>",
+    "title": "Angular Webpack boilerplate",
+    "description": "Boilerplate based on AngularJS and webpack",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nkovacic/angularjs-webpack-boilerplate.git"
+    },
+    "keywords": [
+        "angular",
+        "bootstrap",
+        "angular-touchspin",
+        "touchspin",
+        "angularjs",
+        "angular touchspin"
+    ],
+    "main": "./src/index.js",
+    "licence": "MIT",
+    "dependencies": {
+        "angular": "~1.4",
+        "angular-ui-bootstrap": "~1.3",
+        "jquery": "~2.2"
+    },
+    "devDependencies": {
+        "babel": "5.8.23",
+        "babel-loader": "5.3.2",
+        "bootstrap-sass": "~3.3",
+        "del": "~2.0",
+        "extract-text-webpack-plugin": "~0.9",
+        "file-loader": "~0.8",
+        "font-awesome": "~4.6",
+        "font-awesome-webpack": "0.0",
+        "gulp": "~3.9",
+        "gulp-util": "~3.0",
+        "html-loader": "~0.4",
+        "html-webpack-plugin": "~1.7",
+        "imports-loader": "~0.6",
+        "less": "~2.3",
+        "lodash": "~4.3",
+        "ng-annotate-loader": "~0.1",
+        "node-bourbon": "~4.2",
+        "node-sass": "~3.4.2",
+        "sass-loader": "~3.2",
+        "style-loader": "~0.13",
+        "url-loader": "~0.5",
+        "webpack": "~1.13",
+        "webpack-dev-server": "~1.14",
+        "wrench": "~1.5"
+    }
+}

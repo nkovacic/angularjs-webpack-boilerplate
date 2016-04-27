@@ -1,0 +1,47 @@
+﻿.angular-fade-show {
+    opacity: 1;
+    @include transition($opacity-transition);
+
+    &.ng-hide {
+       opacity: 0;
+    }
+
+    &.ng-enter, &.ng-leave {
+        //@include transition($opacity-transition);
+    }
+
+    &.ng-enter,
+    &.ng-leave.ng-leave-active {
+       opacity: 0;
+    }
+
+    &.ng-leave,
+    &.ng-enter.ng-enter-active {
+        opacity: 1;
+    }
+}
+
+.angular-tabset-fade-show {
+    & > .tab-content {
+        position: relative;
+
+        & > .tab-pane {
+            @include transition($opacity-transition);
+
+            &.active-remove {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                display: block;
+            }
+
+            &.active-remove-active {
+               opacity: 0;
+            }
+
+            &.active-add {
+               opacity: 0;
+            }
+        }
+    }
+}

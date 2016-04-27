@@ -1,0 +1,14 @@
+@mixin remove-gradient($color: transparent) {
+    background-color: $color;
+    background-image: none;
+    background-repeat: no-repeat;
+    filter: none;
+}
+
+@function lm-image-url($url) {
+    @return url('#{$image-asset-path}/#{$url}');
+}
+
+@mixin lm-font-face($font-family, $file-path, $weight: normal, $style: normal, $file-formats: eot woff2 woff ttf svg) {
+    @include font-face($font-family, '#{$font-asset-path}/#{$file-path}', $weight, $style, false, $file-formats);
+}
