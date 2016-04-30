@@ -1,15 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <title>
-            Angular typescript webpack
-        </title>
-    </head>
-    <body ng-controller="MainController as vm">
+<head>
+    <meta charset="UTF-8"/>
+    <title>
+        Angular typescript webpack
+    </title>
+</head>
+<body ng-controller="MainController as main">
+    <alerts></alerts>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <hello-world text="Hello!!!"></hello-world>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">AngularJS Webpack Boilerplate</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">AngularJS Webpack Boilerplate</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
         </div>
-        <script src="http://localhost:8080/webpack-dev-server.js"></script>
-    </body>
+    </nav>
+    <div class="container">
+        <div class="page-header">
+            <h1>AngularJS Webpack Boilerplate</h1>
+        </div>
+        <p class="lead">Happy coding :). Use command <code>gulp dev</code> for developing and <code>gulp production</code> for production.</p>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Example component</h3>
+                    </div>
+                    <div class="panel-body">
+                        <hello-world text="Hello!!!"></hello-world>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Show example alert</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <input class="form-control" ng-model="main.exampleAlert.message" type="text" placeholder="Enter message for alert">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" ng-model="main.exampleAlert.type">
+                                    <option value="danger">Error</option>
+                                    <option value="info">Info</option>                              
+                                    <option value="success">Success</option>
+                                    <option value="warning">Warning</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-default" ng-click="main.testAlert();">
+                                Show alert
+                            </button>  
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+<footer>
+    <div class="container">
+        <p>Copyright &copy; 2016</p>
+    </div>
+</footer>
+<script src="http://localhost:8080/webpack-dev-server.js"></script>
+</body>
 </html>

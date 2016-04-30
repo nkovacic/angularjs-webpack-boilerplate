@@ -6,6 +6,6 @@ module.exports = function HelloWorldController($timeout) {
 	vm.appendedText = 'HelloWorldController. Text from argument is: ' + this.text + '.';
 
 	$timeout(function() {
-		vm.appendedText += "Timeout test"
-	});
-}
+		vm.appendedText += "Timeout test";
+	}, 5000);
+};

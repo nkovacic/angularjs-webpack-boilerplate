@@ -170,7 +170,7 @@ var angular = require('angular'),
              * @param callback
              */
             _override: function(object, methodName, callback) {
-                object[methodName] = callback(object[methodName])
+                object[methodName] = callback(object[methodName]);
             }
         });
 

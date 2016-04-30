@@ -1,3 +1,7 @@
 <div class="alerts-wrapper">
-	<alert ng-repeat="alert in vm.alerts" type="{{alert.type}}" close="vm.closeAlert($index)">
+	<div class="container">
+		<uib-alert ng-repeat="alert in vm.alerts" type="{{alert.type}}" close="vm.closeAlert(alert, $index)">
+			{{alert.message}}
+		</uib-alert>
+	</div>
 </div>

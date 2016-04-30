@@ -1,7 +1,7 @@
-var angular = require('angular'),
+var AngularES6 = require('shared/utilities/angular-es6'),
     alertsModule = require('./components/alerts/alerts.module');
 
-module.exports = angular
+module.exports = AngularES6
 	.module('nk.app.shared.components', [
 		alertsModule.name
 	]);

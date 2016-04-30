@@ -17,8 +17,8 @@ gulp.task('server:dev', function(callback) {
         //publicPath: webpackDevConfig.output.publicPath,
         stats: {
             colors: true
-        },
-        hot: true,/*
+        }/*,
+        hot: true,
         quiet: false,
         noInfo: false,*/
     }).listen(8080, 'localhost', function(err) {
