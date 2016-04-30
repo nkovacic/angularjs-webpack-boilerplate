@@ -8,7 +8,7 @@ var path = require('path');
 
 gulp.task('build', ['scripts:build']);
 gulp.task('build:dev', ['scripts:build-dev']);
-gulp.task('build:dist', ['scripts:build', 'scripts:build-dist']);
+gulp.task('build:dist', ['scripts:build-dist']);
 gulp.task('clean', function() {
     return del([path.join(conf.paths.dist, '/')]);
 });

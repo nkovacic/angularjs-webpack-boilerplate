@@ -74,12 +74,7 @@ function getDevConfig(env) {
         },
         plugins: _.concat(getCommonPlugins(env), 
             new webpack.OldWatchingPlugin(),
-            new ExtractTextPlugin('bundle.css'),
-            new HtmlWebpackPlugin({
-                template: './public/index.html',
-                inject: 'body',
-                hash: true
-            })
+            new ExtractTextPlugin('bundle.css')
         )
     };
 }
@@ -89,10 +84,12 @@ function getBuildConfig(env) {
 
     return _.extend({}, distConfig, {
         output: {
+            filename: 'bundle.js',
             path: conf.paths.dist
         },
         plugins: _.concat(getCommonPlugins(env), [
             new webpack.optimize.DedupePlugin(),
+            new ExtractTextPlugin('bundle.css'),
             new webpack.optimize.OccurenceOrderPlugin(),
             new webpack.optimize.AggressiveMergingPlugin()
         ])
@@ -104,6 +101,9 @@ function getDistConfig(env) {
         output: {
             filename: 'bundle.min.js',
             path: conf.paths.dist
+        },
+        sassLoader: {
+            includePaths: bourbon.includePaths
         },
         plugins: _.concat(getCommonPlugins(env), [
             new ExtractTextPlugin('bundle.min.css'),
@@ -127,6 +127,11 @@ function getCommonPlugins(env) {
             jQuery: 'jquery',
             'window.jQuery': 'jquery',
             'window.jquery': 'jquery'
+        }),
+        new HtmlWebpackPlugin({
+            template: './public/index.html',
+            inject: 'body',
+            hash: true
         })
     ];
 }

@@ -30,6 +30,7 @@ gulp.task('default', ['clean'], function() {
 
 gulp.task('dev', ['server:dev']);
 
-gulp.task('dist', ['clean'], function () {
-	gulp.start(['build', 'build:dist']);
+
+gulp.task('prod', ['clean'], function () {
+	gulp.start(['build:dist']);
 });

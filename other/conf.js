@@ -25,12 +25,12 @@ module.exports = {
     paths: {
         src: path.join(projectRoot, 'src'),
         dev: path.join(projectRoot, 'public'),
-        dist: path.join(projectRoot, 'public'),
+        dist: path.join(projectRoot, 'public/build'),
         root: projectRoot
     }, 
     publicPaths: {
         dev: '/',
-        dist: '/'
+        dist: '/build'
     },     
     tags: {
         build: 'build',

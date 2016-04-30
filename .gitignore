@@ -40,3 +40,5 @@ reports
 
 # TypeScript typings
 typings
+
+public/build
