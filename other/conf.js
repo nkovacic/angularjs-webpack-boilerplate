@@ -25,13 +25,16 @@ module.exports = {
     paths: {
         src: path.join(projectRoot, 'src'),
         dev: path.join(projectRoot, 'public'),
-        dist: path.join(projectRoot, 'public/build'),
+        dist: path.join(projectRoot, 'public'),
         root: projectRoot
     }, 
     publicPaths: {
         dev: '/',
-        dist: '/build'
-    },     
+        dist: '/'
+    },
+    server: {
+        port: 8080
+    },
     tags: {
         build: 'build',
         dev: 'development',

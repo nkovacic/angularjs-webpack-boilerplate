@@ -129,9 +129,11 @@ function getCommonPlugins(env) {
             'window.jquery': 'jquery'
         }),
         new HtmlWebpackPlugin({
-            template: './public/index.html',
+            template: './src/index.ejs',
             inject: 'body',
-            hash: true
+            hash: true,
+            addWebpackServerScript: env === conf.tags.dev,
+            serverPort: conf.server.port
         })
     ];
 }

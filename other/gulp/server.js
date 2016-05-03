@@ -18,10 +18,10 @@ gulp.task('server:dev', function(callback) {
         stats: {
             colors: true
         },
-        hot: true,
+        //hot: true,
         quiet: false,
-        noInfo: false,
-    }).listen(8080, 'localhost', function(err) {
+        noInfo: false
+    }).listen(conf.server.port, 'localhost', function(err) {
         if (err) throw new gutil.PluginError('webpack-dev-server', err);
         gutil.log('[webpack-dev-server]', 'http://localhost:8080/webpack-dev-server/index.html');
     });
